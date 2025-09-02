@@ -34,3 +34,5 @@ The program is run with one of the following arguments:
 * `crypto.txt`: File with the encrypted text.
 * `decrypt.txt`: File with the decrypted text.
 * `key-found.txt`: File with the key found by cryptanalysis.
+
+**Author:** A. Falkowski | Project created as a programming exercise.
