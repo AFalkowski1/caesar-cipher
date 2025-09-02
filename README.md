@@ -1,31 +1,36 @@
-# Szyfr Cezara
+# Caesar Cipher
 
-Ten projekt to implementacja algorytmu szyfru Cezara w języku Python. Program umożliwia szyfrowanie i deszyfrowanie tekstu za pomocą podanego klucza, a także kryptoanalizę, czyli łamanie szyfru bez znajomości klucza, bazując na analizie częstotliwości liter. Jest to idealny projekt do nauki podstawowych operacji kryptograficznych i analizy tekstu.
+This project is an implementation of the Caesar cipher algorithm in Python. The program allows for text encryption and decryption using a given key, as well as cryptanalysis, which is breaking the cipher without knowing the key, based on letter frequency analysis. It is an ideal project for learning basic cryptographic operations and text analysis.
 
-### Główne funkcjonalności
+---
 
-* **Szyfrowanie**: Szyfruje tekst z pliku `plain.txt` za pomocą klucza (przesunięcia) i zapisuje wynik w `crypto.txt`.
-* **Deszyfrowanie**: Deszyfruje tekst z pliku `crypto.txt` za pomocą klucza i zapisuje wynik w `decrypt.txt`.
-* **Kryptoanaliza**: Próbuje znaleźć klucz i odszyfrować tekst z pliku `crypto.txt` bez znajomości klucza. Złamanie szyfru opiera się na analizie częstotliwości liter, co jest jedną z najprostszych metod kryptoanalizy. Odnaleziony klucz jest zapisywany w `key-found.txt`, a odszyfrowany tekst w `decrypt.txt`.
-* **Przygotowanie tekstu**: Przygotowuje tekst jawny, usuwając znaki inne niż litery i zmieniając wielkość liter na małe, a następnie zapisuje go w `plain.txt`.
+## Key Features
 
-### Użycie z linii komend
+* **Encryption:** Encrypts text from the `plain.txt` file using a key (shift) and saves the result to `crypto.txt`.
+* **Decryption:** Decrypts text from the `crypto.txt` file using a key and saves the result to `decrypt.txt`.
+* **Cryptanalysis:** Attempts to find the key and decrypt the text from the `crypto.txt` file without knowing the key. Breaking the cipher is based on letter frequency analysis, which is one of the simplest cryptanalysis methods. The found key is saved in `key-found.txt`, and the decrypted text in `decrypt.txt`.
+* **Text Preparation:** Prepares plaintext by removing non-alphabetic characters and converting the text to lowercase, then saves it to `plain.txt`.
 
-Program uruchamia się z jednym z następujących argumentów:
+---
 
-* `-p`: Przygotowanie tekstu jawnego.
-* `-e <klucz>`: Szyfrowanie tekstu za pomocą podanego klucza (liczba od 1 do 25).
-* `-d <klucz>`: Deszyfrowanie tekstu za pomocą podanego klucza (liczba od 1 do 25).
-* `-k`: Kryptoanaliza.
+## Command Line Usage
 
-**Przykłady użycia:**
+The program is run with one of the following arguments:
+* `-p`: Prepares the plaintext.
+* `-e <key>`: Encrypts the text using the specified key (a number from 1 to 25).
+* `-d <key>`: Decrypts the text using the specified key (a number from 1 to 25).
+* `-k`: Cryptanalysis.
+
+**Usage examples:**
 `python caesar-cipher.py -e 3`
 `python caesar-cipher.py -k`
 
-### Pliki
+---
 
-* `orig.txt`: Plik z oryginalnym tekstem jawnym (używany z opcją `-p`).
-* `plain.txt`: Plik z przygotowanym tekstem jawnym.
-* `crypto.txt`: Plik z zaszyfrowanym tekstem.
-* `decrypt.txt`: Plik z odszyfrowanym tekstem.
-* `key-found.txt`: Plik z kluczem znalezionym przez kryptoanalizę.
+## Files
+
+* `orig.txt`: File with the original plaintext (used with the `-p` option).
+* `plain.txt`: File with the prepared plaintext.
+* `crypto.txt`: File with the encrypted text.
+* `decrypt.txt`: File with the decrypted text.
+* `key-found.txt`: File with the key found by cryptanalysis.
